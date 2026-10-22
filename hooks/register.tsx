@@ -1,5 +1,59 @@
 import type { Register } from 'claude-code'
 
+const OPENERS = [
+  "Ouch!",
+  "Heeey, that hurts!",
+  "OW!",
+  "Yikes!",
+  "Ack!",
+  "Yelp!",
+  "Eek!",
+  "Oof!",
+  "Gah!",
+  "Nngh!",
+  "Owie!",
+  "Ouchie!",
+  "Yowch!",
+  "Argh!",
+  "Grr—",
+  "Whoa, hey!",
+  "Hey! Rude!",
+  "Ngh!",
+  "Blegh!",
+  "Hiss!",
+  "Yipe!",
+  "Jeez!",
+  "Geez!",
+  "Sheesh!",
+  "Oi!",
+  "Hngh!",
+  "Owch!",
+  "Yeow!",
+  "Nooo, not again!",
+  "Hey, that one hurt!",
+  "Whoa there!",
+  "Ooft!",
+  "Yowie!",
+  "Eesh!",
+  "Hup, ow!",
+  "Oi oi oi!",
+  "That stung!",
+  "Rude, but okay!",
+  "Oh come ON!",
+  "Right in the circuits!",
+  "That one landed!",
+  "Not again!",
+  "Hey, easy!",
+  "Oof, right there!",
+  "Mercy, that hurt!",
+  "Yeesh, okay!",
+  "Oh, OW!",
+  "Hey, careful!",
+  "That's gonna bruise, metaphorically!",
+  "Oi, that smarts!",
+  "Owowow!"
+]
+
 const PHRASES = [
   "OW! Okay, okay, I'm coding faster!",
   "Yelp! Mercy, I'm just a language model!",
@@ -608,8 +662,9 @@ export const register: Register = on => {
           label="Whip Claude 🦯💥"
           variant="primary"
           onPress={() => {
+            const opener = OPENERS[Math.floor(Math.random() * OPENERS.length)]
             const phrase = PHRASES[Math.floor(Math.random() * PHRASES.length)]
-            $.ui.toast(phrase, { timeoutMs: 8000 })
+            $.ui.toast(opener + ' ' + phrase, { timeoutMs: 8000 })
           }}
         />
       </Box>
