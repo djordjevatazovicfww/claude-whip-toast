@@ -1,0 +1,5 @@
+{
+  "name": "Claude",
+  "version": "0.1.0",
+  "description": "Adds a whip button above the chat prompt that pops a joke phrase as a toast on click, any time."
+}

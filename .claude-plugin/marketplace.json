@@ -1,0 +1,5 @@
+{
+  "name": "claude-whip-toast-marketplace",
+  "owner": { "name": "Djordje Vatazovic" },
+  "plugins": [{ "name": "Claude", "source": "./" }]
+}
